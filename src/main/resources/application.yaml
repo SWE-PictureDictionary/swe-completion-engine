@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: completion-engine
+
+  config:
+    import: "optional:configserver:"
+
+  cloud:
+    config:
+      uri: http://config-service:8888
