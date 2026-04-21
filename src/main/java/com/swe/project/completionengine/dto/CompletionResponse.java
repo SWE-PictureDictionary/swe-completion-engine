@@ -1,8 +1,5 @@
 package com.swe.project.completionengine.dto;
 
-import lombok.Data;
-
-@Data
 public class CompletionResponse {
 
     public enum Status {
@@ -33,14 +30,22 @@ public class CompletionResponse {
         return status;
     }
 
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     public int getRemaining() {
         return remaining;
+    }
+
+    public void setRemaining(int remaining) {
+        this.remaining = remaining;
     }
 
     @Override
     public String toString() {
         return status == Status.COMPLETE
-            ? "COMPLETE"
-            : "IN_PROGRESS (remaining: " + remaining + ")";
+                ? "COMPLETE"
+                : "IN_PROGRESS (remaining: " + remaining + ")";
     }
 }
