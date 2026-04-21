@@ -12,4 +12,12 @@ import lombok.NoArgsConstructor;
 public class CompletionRequest {
     private Set<String> allLabels;
     private Set<String> clickedLabels;
+
+    public Set<String> getAllLabels() {
+        return allLabels;
+    }
+
+    public Set<String> getClickedLabels() {
+        return clickedLabels;
+    }
 }
